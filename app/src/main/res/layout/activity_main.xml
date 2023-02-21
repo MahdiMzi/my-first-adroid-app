@@ -8,12 +8,10 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="307dp"
+        android:layout_height="550dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="40dp"
         android:background="#FBFAFA"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,116 +19,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:text="Counter Title"
-            android:textAlignment="center"
-            android:textColor="#3F51B5"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/counter_show"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/counter_show"
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:layout_marginTop="60dp"
-            android:text="0"
-            android:textAlignment="center"
-            android:textColor="#F44336"
-            android:textSize="50sp"
-            app:flow_horizontalAlign="center"
-            app:flow_verticalAlign="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
+            android:layout_height="185dp"
+            android:layout_margin="5dp"
+            android:background="@color/material_dynamic_neutral60">
 
-            android:gravity="bottom|center_horizontal"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp"
-                android:gravity="bottom|start|center_horizontal|end"
-                android:orientation="horizontal"
-
-                >
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/square_button1"
-                    android:insetBottom="0dp"
-                    android:text="-"
-                    app:layout_constraintEnd_toStartOf="@+id/button_click"
-                    tools:layout_editor_absoluteY="544dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp"
-                android:gravity="bottom|start|center_horizontal|end"
-                android:orientation="horizontal"
-
-                >
-
-                <Button
-                    android:id="@+id/button_click"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/square_button"
-                    android:insetBottom="0dp"
-                    android:text="Reset"
-                    app:iconPadding="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/counter_show" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp"
-                android:gravity="bottom|start|center_horizontal|end"
-                android:orientation="horizontal"
-
-                >
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/square_button1"
-                    android:insetBottom="0dp"
-                    android:text="+"
-                    app:layout_constraintStart_toEndOf="@+id/button_click"
-                    tools:layout_editor_absoluteY="544dp" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:itemCount="5"
+
+
+                tools:listitem="@layout/cart_view_design" />
+
+            <Button
+                android:id="@+id/btn_enter"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="right|end"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/square_button"
+                android:text="+ New Counter"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

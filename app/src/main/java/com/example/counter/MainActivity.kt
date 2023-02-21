@@ -1,10 +1,11 @@
 package com.example.counter
 
+
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,15 +15,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var num : TextView = findViewById(R.id.counter_show)
-        var plusbutton : Button = findViewById(R.id.button_click)
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
 
-        var counter : Int = 0
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        plusbutton.setOnClickListener {
-            num.setText ( " " + ++counter )
+        val data = ArrayList<ItemsViewModel>()
 
-
+        for (i in 1..20) {
+            data.add(ItemsViewModel("Item " + i))
         }
+
+        val adapter = CustomAdapter(data)
+
+        recyclerView.adapter = adapter
+
     }
 }
