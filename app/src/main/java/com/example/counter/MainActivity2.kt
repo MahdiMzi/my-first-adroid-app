@@ -19,6 +19,7 @@ class MainActivity2 : AppCompatActivity() {
             num.setText ( " " + ++counter )
 
 
+
         }
     }
 }

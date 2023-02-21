@@ -41,12 +41,10 @@
                 android:layout_height="280dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 tools:itemCount="5"
-
-
                 tools:listitem="@layout/cart_view_design" />
 
             <Button
-                android:id="@+id/btn_enter"
+                android:id="@+id/btn"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"

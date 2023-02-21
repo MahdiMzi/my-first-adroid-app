@@ -28,6 +28,6 @@ class CustomAdapter (private val mList: List<ItemsViewModel>) : RecyclerView.Ada
 
         val textView: TextView = itemView.findViewById(R.id.textView)
 
-
     }
+
 }
