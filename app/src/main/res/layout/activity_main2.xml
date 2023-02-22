@@ -73,7 +73,7 @@
                 >
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btnMinus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/square_button1"
@@ -94,7 +94,7 @@
                 >
 
                 <Button
-                    android:id="@+id/button_click"
+                    android:id="@+id/btnReset"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/square_button"
@@ -118,7 +118,7 @@
                 >
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btnPlus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/square_button1"
